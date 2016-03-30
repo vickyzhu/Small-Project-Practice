@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>硬蛋</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon">
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../massets/css/reset.css">
+    <link rel="stylesheet" href="../../massets/css/shop.css">
+    <link rel="stylesheet" href="../../massets/plug/swiper/3.0.7/swiper.min.css">
+    
+
+</head>
+<body>
+	<div class="main">
+		<div class="main-body">
+			<div id="mainBox" class="main-box">
+				<div id="shopIndex" class="page shop-index">
+					<!--返回顶部 -->
+					<div class="float-aside transition-all-3 ">
+                      <a class="back-top relative" id="backTop" href="javascript:void(0);"></a>  
+                  	</div>
+
+			    	<div class="content">
+            			<!-- 顶部导航 -->
+            			<header>
+            			    <div class="top-nav">
+            			        <a href="javascript:;" class="turn-search" title="搜索"></a>
+            			        <h1 class="title">硬蛋网</h1>
+            			            <a href="http://m.ingdan.com/people/m_center" class="turn-site js-login" title="个人中心"></a>
+            			    </div>
+            			    <div class="search" style="display:none;">
+            			        <a href="javascript:;" class="close"></a>
+            			        <form action="http://m.ingdan.com/home/search_by_keyword">
+            			            <input type="text" id="searchKey" name="searchKey" placeholder="发现/资讯/众测/活动">
+            			            <button type="submit" id="searchBtn"><i class="go-search"></i></button>
+            			        </form>
+            			    </div>
+            			</header>
+                        <a href="javascript:void(0);" class="mask-layer hide"><i>遮罩层</i></a>
+                        <nav id="nav" class="nav">
+                            <ul>
+                                <li><a href="http://m.ingdan.com/" title="首页">首页</a></li>
+                                <li><a class="z-sel" href="../shop/index.html" title="商城">商城</a></li>
+                                <li><a href="http://m.ingdan.com/discovery/" title="发现">发现</a></li>
+                                <li><a href="http://m.ingdan.com/news/" title="资讯">资讯</a></li>
+            
+                                <li class="sub-row" style="display:none;"><a href="http://m.ingdan.com/free/" title="众测">众测</a>     </li>
+                                <li class="sub-row" style="display:none;"><a href="http://m.ingdan.com/events/" title="活动">活动</a></li>
+                                <li class="sub-row" style="display:none;"><a href="http://m.ingdan.com/rewards/" title="积分兑换">          积分兑换</a></li>
+                                <li class="sub-row" style="display:none;"><a href="http://m.ingdan.com/mall/" title="硬蛋商城">     硬蛋商城    </a></li>
+                                <i class="tab-toggle"></i>
+                            </ul>
+                        </nav>
+
+				    	<section class="mainBox detail-box">
+						  	<!-- 第二期 -->
+                            <div class="term-item">
+                                <div  class="banner">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <a href="detail.html"><img src="../../massets/images/shop/1.png" /></a>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <a href="detail.html"><img src="../../massets/images/shop/2.png" /></a>
+                                      </div>
+                                    </div>
+                                    <div class="pagination"></div>  
+                                </div>
+                                <div class="term-title "><i class="second-item"></i>首发新品</div>
+                            </div>
+                            <!-- 第一期 -->
+                            <div class="term-item">
+                                <div  class="banner">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                           <a href="detail.html"><img src="../../massets/images/shop/2.png" /></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                           <a href="detail.html"><img src="../../massets/images/shop/1.png" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="pagination"></div>  
+                                </div>
+                                <div class="term-title "><i class="first-item"></i>首发新品</div>
+                            </div>
+                
+                            <!-- 特卖 -->
+                            <div class="term-item">
+                                <div  class="banner">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                         <a href="detail.html"><img src="../../massets/images/shop/3.png" /></a>
+                                      </div>
+                                      <div class="swiper-slide">
+                                         <a href="detail.html"><img src="../../massets/images/shop/2.png" /></a>
+                                      </div>
+                                    </div>
+                                    <div class="pagination"></div>  
+                                </div>
+                                <div class="term-title "><i class="deals-item"></i>商品</div>
+                            </div>
+
+
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- js -->
+<script src="../../massets/plug/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../massets/plug/swiper/3.0.7/swiper.min.js"></script>
+<script src="../../massets/js/base.js"></script>
+<script src="../../massets/js/shop.js"></script>
+</body>
+</html>

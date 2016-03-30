@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="format-detection" content="telephone=no">
+    <title>硬蛋Link — 硬蛋网</title>
+    <meta name="description" content="硬蛋Link — 硬蛋网">
+    <meta name="keywords" content="硬蛋Link — 硬蛋网">
+    <link rel="shortcut icon" href="../../../massets/images/favicon.ico" type="image/x-icon">
+    <script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../massets/css/activeReset.css">
+    <link rel="stylesheet" href="../../massets/event/regBizEvent/css/index-new.css" />
+</head>
+<body>
+
+<div class="main">
+    <div class="main-body">
+        <div id="mainBox" class="main-box">
+            <div id="success" class="page">
+                <div id="loading" class="loading">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+
+                <div class="content content-success supplier-upgrade-success">
+                    <div class="content-main">
+                        <header class="successHeader">
+                            <p>恭喜您已完成VIP升级！</p>
+                        </header>
+                        <p class="titleP">请尽快登录硬蛋Link网站<span>上传证件资料</span><br>完成VIP供应商审核，获得需求对接</p>
+
+                        <p class="urlTitle"><span>硬蛋Link网站: </span> biz.ingdan.com</p>
+                    </div>
+
+                    <div class="crp">Copyright © 深圳市可购百信息技术有限公司 All Rights Reserved. 粤ICP备13026662号-2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../massets/plug/zepto/zepto.min.js"></script>
+<script src="../../massets/event/regBizEvent/js/common.js"></script>
+<!-- 添加百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?249e3379cdfd453852c0bc7c9701a7f0";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
+

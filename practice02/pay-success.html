@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>硬蛋网Link</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon">
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../massets/css/activeReset.css">
+    <link rel="stylesheet" href="../../massets/css/linkMobile.css">
+</head>
+<body>
+<div class="main">
+	<div class="main-body">
+		<div id="mainBox" class="main-box">
+			<div id="index" class="page">
+			    <div class="content content-pay-success">
+                    <div class="pay-result">
+                        支付成功！
+                        <i class="pay-result-icon"></i>
+                    </div>
+                   <div class="related-info">
+                       <p>你已成为硬蛋VIP，可立即提交需求</p>
+                       <a  href="requirement-submit.html" class="skin-btn skin-btn-yellow">提交需求</a>
+                       <a  href="" class="skin-btn skin-btn-yellow skin-btn-yellow-02">暂不提需求</a>
+
+                   </div>
+
+
+                   <!-- 底部 -->
+                   <footer class="foot">
+                        <div class="foot-bg"></div>   
+                   </footer>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- js -->
+<script type="text/javascript" src="../../massets/plug/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../massets/js/linkMobile.js"></script>
+
+
+</body>
+</html>

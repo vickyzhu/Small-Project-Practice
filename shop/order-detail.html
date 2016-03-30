@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>订单支付</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon">
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../massets/css/reset.css">
+    <link rel="stylesheet" href="../../massets/css/shop.css">
+
+</head>
+<body>
+	<div class="main">
+		<div class="main-body">
+			<div id="mainBox" class="main-box">
+				<div id="shopIndex" class="page shop-index">
+					<!--返回顶部 -->
+					<div class="float-aside transition-all-3 ">
+                      <a class="back-top relative" id="backTop" href="javascript:void(0);"></a>  
+                  	</div>
+
+			    	<div class="content">
+            		<!-- 顶部导航 -->
+                  		<header>
+                  		    <div class="top-nav">
+                  		        <a href="javascript:history.go(-1);" class="go-back" title="返回">返回</a>
+                  		        <h1 class="title">订单详情</h1>
+                  		        <a href="index.html" class="go-home" title="主页"></a>
+                  		    </div>
+                  		    
+                  		</header>
+
+						<section class="mainBox detail-box">
+							<div class="order-user-info">
+								<dl class="clearfix">
+									<dt>快递单号</dt><dd>申通物流 302909384</dd>
+								</dl>
+								<dl class="clearfix">
+									<dt>状态</dt><dd class="order-state">待发货 </dd>
+								</dl>
+								<dl class="clearfix">
+									<dt>收货人</dt><dd>王曼哲</dd>
+								</dl>
+								<dl class="clearfix">
+									<dt>手机号码</dt><dd>13800138000</dd>
+								</dl>
+								<dl class="clearfix">
+									<dt>地址</dt><dd>广东省深圳市南山区科苑南路中国地质大 学研基地C101</dd>
+								</dl>
+							</div>
+							<div class="order-good-info">
+								<div class="order-number">订单号：123456789</div>
+								<div class="good-item clearfix">
+									<div class="left"><img src="../../massets/images/shop/good-item02.jpg"></div>
+									<div class="right clearfix">
+										<h2>CASIO PX-150BK Privia系列智能钢琴 钢琴 </h2>
+										<div class="good-price">￥299.00</div>
+										<div class="good-count"><i>x</i>1</div>
+										<ul class="other-info"><li>规格：基础版</li><li>颜色分类：白色 </li></ul>
+									</div>
+								</div>
+								
+							</div>
+							<div class="good-sum">
+            					<span class="sum-num">共1件商品</span>
+            					<span class="sum-price">合计：<span> <i>￥</i>312<i>.00</i></span><em>（含运费￥13.00）</em></span>
+            				</div>
+						</section>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- js -->
+<script src="../../massets/plug/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../massets/plug/swiper/3.0.7/swiper.min.js"></script>
+<script src="../../massets/js/base.js"></script>
+<script src="../../massets/js/shop.js"></script>
+</body>
+</html>

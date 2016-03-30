@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>硬蛋网Link</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon">
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../massets/css/activeReset.css">
+    <link rel="stylesheet" href="../../massets/css/linkMobile.css">
+</head>
+<body>
+<div class="main">
+	<div class="main-body">
+		<div id="mainBox" class="main-box">
+			<div id="index" class="page">
+			    <div class="content content-requirement">
+                    <div class="requirement-title">
+                        <h3>提交新需求</h3>
+                        <p>在供应链遇到的问题，蛋君为您解</p>
+                    </div>
+                    
+                    <div class="form-box">
+                        <form action="" class="form requirement-form" name="">
+                            <label for="" class=" in-box">
+                                <div class="demand-type js-demandtype">
+                                    <div class="demand-type-title js-demandtype-title">
+                                        <span class="ellipsis">请选择需求的类型</span>
+                                        <i class="icon icon-triangle"></i>
+                                    </div>
+                                    <div class="demand-type-box js-demandtype-box">
+                                        <div class="demand-type-check clearfix">
+                                            <label for="demandTypeO1"><input id="demandTypeO1" name="demandTypeCheck" type="checkbox" value="1">外观设计</label>
+                                            <label for="demandTypeO2"><input id="demandTypeO2" name="demandTypeCheck" type="checkbox" value="2">开模制造</label>
+                                            <label for="demandTypeO3"><input id="demandTypeO3" name="demandTypeCheck" type="checkbox" value="3">器件采购</label>
+                                            <label for="demandTypeO4"><input id="demandTypeO4" name="demandTypeCheck" type="checkbox" value="4">结构设计</label>
+                                            <label for="demandTypeO5"><input id="demandTypeO5" name="demandTypeCheck" type="checkbox" value="5">组装测试</label>
+                                            <label for="demandTypeO7"><input id="demandTypeO7" name="demandTypeCheck" type="checkbox" value="7">检测认证</label>
+                                            <label for="demandTypeO8"><input id="demandTypeO8" name="demandTypeCheck" type="checkbox" value="8">制版贴片</label>
+                                            <label for="demandTypeO9"><input id="demandTypeO9" name="demandTypeCheck" type="checkbox" value="9">电子方案</label>
+                                            <label for="demandTypeO10"><input id="demandTypeO10" name="demandTypeCheck" type="checkbox" value="10">辅料包装</label>
+                                            <label for="demandTypeO6"><input id="demandTypeO6" name="demandTypeCheck" type="checkbox" value="6">其他</label> 
+                                        </div>
+                                        <div class="demand-type-btn">
+                                            <a href="javascript:void(0);" class="skin-btn">确定</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label for="" class="">
+                                <textarea class="in-txt in-block in-longtxt" placeholder="请填写您的需求详情" id="requireText" name="requireText"></textarea>
+                                <span class="tips in-block" data-null="需求不能为空" data-specialchar="需求不能含有特殊字符" data-formaterr="需求应为2-300个字"></span>
+                               
+                            </label>
+                             <label for="" class="">     
+                                <input type="submit" id="subRequirementBtn" class="skin-btn submit-btn" value="立即提交">
+                            </label> 
+                        </form>
+                    </div>
+
+                   <!-- 底部 -->
+                   <footer class="foot">
+                        <div class="foot-bg"></div>   
+                   </footer>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- js -->
+<script type="text/javascript" src="../../massets/plug/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="../../massets/js/linkMobile.js"></script>
+
+
+</body>
+</html>

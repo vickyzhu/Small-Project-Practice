@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="format-detection" content="telephone=no">
+  <title>编辑收货地址</title>
+  <meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+  <meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+  <link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon">
+  <script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+  <!-- css -->
+    <link rel="stylesheet" href="../../massets/css/reset.css">
+    <link rel="stylesheet" href="../../massets/css/shop.css">
+
+</head>
+<body>
+  <div class="main">
+    <div class="main-body">
+      <div id="mainBox" class="main-box">
+        <div id="shopAddress" class="page shop-index">
+          <!--返回顶部 -->
+          <div class="float-aside transition-all-3  ">
+            <a class="back-top relative" id="backTop" href="javascript:void(0);"></a>  
+          </div>
+
+          <div class="content">
+            <!-- 顶部导航 -->
+            <header>
+              <div class="top-nav">
+                <a href="javascript:history.go(-1);" class="go-back" title="返回">返回</a>
+                <h1 class="title">编辑收货地址</h1>
+                <a href="index.html" class="go-home" title="主页"></a>
+              </div>
+            </header>
+
+            <section class="mainBox address-pop">
+              <div class="form-box">
+                <form name="addOrEditAddress"  action="">
+                  <label for="username" class="in-box">
+                    <span>收货人</span>
+                    <input type="text" id="username" name="username" class="in-txt in-block" value="李艳">
+                  </label>
+                  <label for="userphone" class="in-box">
+                    <span>手机号</span>
+                    <input type="text" id="userphone" name="phone" class="in-txt in-block" value="13800138000" placeholder="">
+                  </label>
+                  <label for="userAddress" class="in-box address-box">
+                    <span>选择地区</span>
+                    <input id="beginChoose" name="beginChoose" class="in-txt in-block begin-choose"  readonly="readonly" value="广东省深圳市南山区">
+                    <i class="shop-icon arrow-icon"></i>
+                      <div  class="ui-screening-nav hide" id="chooseProvince" err-tip="请选择省份">
+                          <div  class="province-list nav-list  hide" name="province" id="province">
+                              <span value="">省份</span> 
+                          </div>   
+                      </div> 
+                      <div  class="ui-screening-nav hide" id="chooseCity" err-tip="请选择市/县">
+                          <div  class="city-list nav-list  hide" name="city" id="city">
+                              <span value="">请选择</span> 
+                          </div>   
+                      </div> 
+                      <div  class="ui-screening-nav hide" id="chooseArea" err-tip="请选择区">
+                          <div  class="area-list nav-list  hide" name="area" id="area">
+                              <span value="">请选择</span> 
+                          </div>   
+                      </div> 
+                      <div  class="ui-screening-nav hide" id="chooseStreet" err-tip="请选择街道">
+                          <div  class="street-list nav-list  hide" name="street" id="street">
+                              <span value="">请选择</span> 
+                          </div>   
+                      </div>    
+                  </label>
+                  <label for="userDetailadress" class="address">
+                    <span>详细地址</span>
+                      <textarea name="address" id="userDetailadress">科技园科苑南路中国地质大学C101</textarea>
+                  </label>
+                  <a href="#" class="cmn-btn" id="subBtn" data-id="">保存</a>
+                </form>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- js -->
+<script src="../../massets/plug/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../massets/plug/swiper/3.0.7/swiper.min.js"></script>
+<script src="../../massets/js/base.js"></script>
+<script src="../../massets/js/shop.js"></script>
+<script src="../../massets/js/addressOption.js"></script>
+
+</body>
+</html>

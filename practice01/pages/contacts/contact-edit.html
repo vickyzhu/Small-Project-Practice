@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>shella</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<!-- <link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon"> -->
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 750;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../wassets/css/reset.css">
+</head>
+<body>
+<div class="main">
+	<div class="main-body">
+		<div id="mainBox" class="main-box">
+			<div id="editContact" class="page">
+			    <div class="content contact-con">
+                    <form method="post" action="" name="ContactForm" id="ContactForm">
+                        <!-- 上传名片→首次上传 -->
+                        <div class="upload-business-card first-upload" id="firstUpload" style="display: none;">
+                            <p class="warn-tips">上传名片自动完成联系人信息输入</p>
+                            <div class="user-related-info">
+                               <p>您正在为公司贡献第XXX个关键资源 </p>
+                               <p>您自己拥有XXX个关键资源</p> 
+                               <a href="javascript:void(0);" class="upload-btn icon">上传名片</a>
+                            </div>   
+                        </div>
+                        <!-- 上传名片→识别名片中 -->
+                        <div class="upload-business-card card-recognizing" id="recognizingCard" style="display: none;">
+                            <div class="card-photo">
+                                <span class="mask-layer"></span>
+                                <img src="../../wassets/images/card.png">
+                            </div>
+                            <p class="upload-tips"><i class="icon recognizing"></i>正在识别</p>    
+                        </div>
+                        <!-- 上传名片→无法识别 -->
+                        <div class="upload-business-card" id="unrecognizedCard" style="display: none;">
+                            <div class="card-photo">
+                                <img src="">
+                            </div>
+                            <p class="upload-tips">无法识别，<a href="javascript:void(0)" id="reUpload">请重新上传</a></p>    
+                        </div>
+                        <!-- 上传完成→重新上传 -->
+                        <div class="upload-business-card card-reupload" id="reuploadCard" >
+                            <div class="card-photo">
+                                <img src="../../wassets/images/card.png">
+                            </div>
+                            <p class="upload-tips"><a href="javascript:void(0)" id="reUpload">重新上传</a></p>     
+                        </div>
+                        <!-- 领域下拉窗 (个人)-->
+                        <div class="drop-area drop-area-sel drop-for-person" style="display: none;">
+                            <a href="javascript:void(0)" class="close"><i>关闭</i></a>
+                            <div class="area-content">
+                                <div class="concern-area pop-choose-area" >
+                                    <a  class="collapse-drop">收起<i class="icon collapse-icon"></i></a>
+                                    <a class="sort-area" id="sortArea" href="javascript:void(0);">排序</a>
+                                    <ul class="area-list">
+                                        <li class="list-item" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                        <li class="list-item" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                        <li class="list-item" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                                        <li class="list-item" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                                        <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                                        <li class="list-item" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                        <li class="list-item" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                        <li class="list-item" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                                        <li class="list-item" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                                        <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                                        <li class="icon add-more"><a href="javascript:void(0);"></a></li>
+
+                                    </ul>
+                                </div>
+                                <!-- 领域排序 -->
+                                <div class="area-sort" style="display: none;">
+                                    <p>上下拖动可调整关注领域的顺序</p>
+                                    <ul class="area-sort-list">
+                                        <li><a href="javascript:void(0);">互联网<span></span></a></li>
+                                        <li><a href="javascript:void(0);">智能硬件<span></span></a></li>
+                                        <li><a href="javascript:void(0);">投资圈<span></span></a></li>
+                                        <li><a href="javascript:void(0);">媒体圈<span></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- 领域下拉窗（公司） -->
+                        <div class="drop-area drop-area-sel drop-for-company" style="display: none;">
+                            <a href="javascript:void(0)" class="close"><i>关闭</i></a>
+                            <div class="area-content">
+                                <div class="concern-area pop-choose-area" >
+                                    <a id="collapseDrop" class="collapse-drop">收起<i class="icon collapse-icon"></i></a>
+                                    <a class="sort-area" id="sortArea" href="javascript:void(0);">排序</a>
+                                    <ul class="area-list">
+                                        <li class="list-item" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                        <li class="list-item" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                        <li class="list-item" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                                        <li class="list-item" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                                        <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                                        <li class="list-item" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                        <li class="list-item" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                        <li class="list-item" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                                        <li class="list-item" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                                        <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                                        <li class="icon add-more"><a href="javascript:void(0);"></a></li>
+
+                                    </ul>
+                                </div>
+                                <!-- 领域排序 -->
+                                <div class="area-sort" style="display: none;">
+                                    <p>上下拖动可调整关注领域的顺序</p>
+                                    <ul class="area-sort-list">
+                                        <li><a href="javascript:void(0);">互联网<span></span></a></li>
+                                        <li><a href="javascript:void(0);">智能硬件<span></span></a></li>
+                                        <li><a href="javascript:void(0);">投资圈<span></span></a></li>
+                                        <li><a href="javascript:void(0);">媒体圈<span></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 联系人信息 -->
+                        <div class="contac-info">
+                            <h2>联系人信息</h2>
+                            <table>
+                                <tr>
+                                    <td class="td-l">姓名<span>*</span></td>
+                                    <td class="in-box"><input type="text" name="name" id="name" value="shella" data-null="请输入姓名" data-specialChar="姓名不能含有特殊字符" data-formatErr="姓名：1-68个字符"></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">手机<span>*</span></td>
+                                    <td class="in-box"><input type="text" name="phone" id="phone" value="13800138000" data-null="请输入手机号"></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">公司</td>
+                                    <td class="in-box"><input type="text" name="company" id="company" value="深圳市可购百技术有限公司"  data-specialChar="公司不能含有特殊字符" data-formatErr="公司：0-68个字符"></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">职位</td>
+                                    <td class="in-box"><input type="text" name="position" id="position" value="销售员"  data-specialChar="职位不能含有特殊字符" data-formatErr="职位：0-68个字符"></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">邮箱</td>
+                                    <td class="in-box"><input type="text" name="email" id="email" value="shella@cogobuy.com"  data-specialChar="" data-formatErr=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">座机</td>
+                                    <td class="in-box"><input type="text" name="tel" id="tel" value="23387626"  data-specialChar="" data-formatErr=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">地址</td>
+                                    <td class="in-box"><input type="text" name="address" id="address" value="深圳市南山科技园"  data-specialChar="地址不能含有特殊字符" data-formatErr="地址：0-200个字符"></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-l">微信</td>
+                                    <td class="in-box weixin-box">
+                                        <div class="bind-user-head"><img src="../../wassets/images/weixin-head.png"></div>
+                                        <p class="bind-user-name">shellalia</p>
+                                        <a href="javascript:void(0);" class="unbind-weixin">解绑</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="concern-area">
+                                            <p>个人关注领域(请选择)</p>
+                                            <ul class="area-list" id="person-concern">
+                                                <li class="list-item active" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                                <li class="list-item active" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                                <li class="list-item active" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                                                <li class="load-more" ><a href="javascript:void(0);">更多>></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="concern-area">
+                                            <p>公司关注领域(请选择)</p>
+                                            <ul class="area-list" id="company-concern">
+                                                <li class="load-more" data-id=""><a href="javascript:void(0);">更多>></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        <div class="user-operate">
+                            <input type="submit" value="保存" class="save-btn" data-type="edit">
+                            <a href="" class="cancell-btn">取消</a>
+                        </div>
+
+                    </form>
+    			</div>
+                
+                <!-- 顶部导航栏 -->
+                <footer>
+                    <a href="add-contact.html"><span class="icon add-contact"></span>新增</a>
+                    <a href="all-contacts.html"><span class="icon turn-contacts"></span>联系人</a>
+                    <a href=""><span class="icon change-language"></span>English</a>
+                </footer>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../wassets/plug/jquery/2.1.3/jquery.js"></script>
+<script type="text/javascript" src="../../wassets/js/base.js"></script>
+<script type="text/javascript" src="../../wassets/js/contact.js"></script>
+<script src="../../wassets/plug/webuploader/webuploader.min.js"></script>
+
+</body>
+</html>

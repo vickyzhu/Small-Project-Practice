@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>关注领域</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<!-- <link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon"> -->
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 750;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=6guanzhuren40, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../wassets/css/reset.css">
+</head>
+<body>
+<div class="main">
+	<div class="main-body">
+		<div id="mainBox" class="main-box">
+			<div id="concernArea" class="all-contacts page">
+			    <div class="content">
+                   <!--关注领域选择  -->
+                    <div class="concern-area pop-choose-area" >
+                    	<a class="pop-btn-close">确定</a>
+                        <a class="sort-area" id="sortArea">排序</a>
+                        <ul class="area-list">
+                            <li class="list-item active" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                            <li class="list-item active" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                            <li class="list-item active" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                            <li class="list-item active" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                            <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                            <li class="list-item" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                            <li class="list-item" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                            <li class="list-item" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+                            <li class="list-item" data-id="4"><a href="javascript:void(0);">媒体圈</a></li>
+                            <li class="list-item" data-id="5"><a href="javascript:void(0);">政府</a></li>
+                            <li class="icon add-more"><a href="javascript:void(0);"></a></li>
+
+                        </ul>
+                    </div>
+                    <!-- 领域排序 -->
+					<div class="area-sort" style="display: none;">
+						<p>上下拖动可调整关注领域的顺序</p>
+                        <ul class="area-sort-list">
+                        	<li><a href="javascript:void">互联网<span></span></a></li>
+                        	<li><a href="javascript:void">智能硬件<span></span></a></li>
+                        	<li><a href="javascript:void">投资圈<span></span></a></li>
+                        	<li><a href="javascript:void">媒体圈<span></span></a></li>
+                        </ul>
+                    </div>
+			    </div>
+
+
+				<div class="add-area">
+					<label for="areaName">
+						<p>领域<span>*</span></p>
+						<input type="text" name="areaName" id="areaName">
+					</label>
+					<div class="user-operate-part">
+						<a href="" class="btn sure-btn">确定</a>
+						<a href="" class="btn cancell-btn">取消</a>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

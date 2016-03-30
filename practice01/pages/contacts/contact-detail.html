@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="format-detection" content="telephone=no">
+	<title>张散散</title>
+	<meta name="description" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<meta name="keywords" content="免费海量订单，还能抢红包 — 硬蛋网">
+	<!-- <link rel="shortcut icon" href="../../massets/images/favicon.ico" type="image/x-icon"> -->
+	<script>
+        // class
+        ! function( navigator ) {
+            var userAgent = navigator.userAgent;
+                documentElement = document.documentElement;
+            if ( userAgent.match( /micromessenger\/5/gi ) ) {
+                documentElement.className += " mobile wx_mobile wx_mobile_5";
+            } else if ( userAgent.match( /micromessenger/gi ) ) {
+                documentElement.className += " mobile wx_mobile";
+            } else if ( userAgent.match( /ucbrowser/gi ) ) {
+                documentElement.className += " mobile uc_mobile";
+            } else if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test( userAgent.toLowerCase() ) ) {
+                documentElement.className += " mobile";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) && ( parseFloat( userAgent.toLowerCase().match( /msie ([0-9]{1,}[\.0-9]{0,})/i )[1] || 999 ) < 9 ) ) {
+                documentElement.className += " pc pc-ie pc-ie8";
+            } else if ( userAgent.toLowerCase().match( /msie/gi ) || navigator.msPointerEnabled || navigator.pointerEnabled ) {
+                 documentElement.className += " pc pc-ie";
+            } else {
+                documentElement.className += " pc";
+            }
+        }( navigator );
+        // meta
+        ! function( userAgent ) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 750;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                    ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                    : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+
+	<!-- css -->
+    <link rel="stylesheet" href="../../wassets/css/reset.css">
+</head>
+<body>
+<div class="main">
+	<div class="main-body">
+		<div id="mainBox" class="main-box">
+			<div id="contactDetail" class="page">
+			    <div class="content">
+                    <p class="user-edit"><a href="contact-edit.html"><i class="icon edit-icon"></i>编辑</a></p>
+                    <div class="upload-business-card">
+                        <div class="card-photo">
+                            <img src="../../wassets/images/card.png">
+                        </div>
+                    </div>
+                    <!-- 联系人详细信息 -->
+                    <div class="contact-detail">
+                        <table>
+                            <tr>
+                                <td class="td-l">姓名<span>*</span>&nbsp;:</td>
+                                <td class="in-box">张散散</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">手机<span>*</span>&nbsp;:</td>
+                                <td class="in-box">13800138000</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">公司 &nbsp;&nbsp;:</td>
+                                <td class="in-box">深圳市可购百技术有限公司</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">职位 &nbsp;&nbsp;:</td>
+                                <td class="in-box">销售员</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">邮箱 &nbsp;&nbsp;:</td>
+                                <td class="in-box">shella@cogobuy.com</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">座机 &nbsp;&nbsp;:</td>
+                                <td class="in-box">23445556</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">地址 &nbsp;&nbsp;:</td>
+                                <td class="in-box">深圳</td>
+                            </tr>
+                            <tr>
+                                <td class="td-l">微信 &nbsp;&nbsp;:</td>
+                                <td class="in-box">
+                                    <div class="bind-user-head"><img src="../../wassets/images/weixin-head.png"></div>
+                                    <p class="bind-user-name">shellalia</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="concern-area">
+                                        <p>个人关注领域(请选择)</p>
+                                        <ul class="area-list" id="person-concern">
+                                            <li class="list-item active" data-id="1"><a href="javascript:void(0);">互联网</a></li>
+                                            <li class="list-item active" data-id="2"><a href="javascript:void(0);">智能硬件</a></li>
+                                            <li class="list-item active" data-id="3"><a href="javascript:void(0);">投资圈</a></li>
+
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="concern-area">
+                                        <p>公司关注领域(请选择)</p>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+			    </div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
