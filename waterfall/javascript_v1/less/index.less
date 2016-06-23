@@ -1,0 +1,25 @@
+@grey: #ccc;
+// 清除浮动
+.clearfix:after,
+.clearfix:before{content:" ";display:table;}
+.clearfix:after{clear:both;}
+
+.main{
+  position: relative;
+}
+.box{
+  float: left;
+  padding:15px 0 0 15px;
+  .pic{
+    width: 180px;
+    height: auto;
+    padding:10px;
+    border-radius:5px;
+    box-shadow:0 0 5px @grey;
+    border:1px solid @grey;
+    img{
+      display: block;
+      width:100%;
+    }
+  }
+}
